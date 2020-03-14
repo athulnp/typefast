@@ -18,10 +18,11 @@
 
   <div class="container">
     <h2>👩‍💻 Speed Typer 👨‍💻</h2>
-    <small>Type the following:</small>
 
     <div *ngIf="IsNotTimeOut; then thenBlock else elseBlock"></div>
     <ng-template #thenBlock>
+      <small>Type the following:</small>
+
       <h1 id="word">{{currentWord}}</h1>
 
       <input type="text" (input)="onValidateWord()" id="text" [(ngModel)]="userword" autocomplete="off"
