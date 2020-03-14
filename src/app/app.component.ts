@@ -16,6 +16,7 @@ export class AppComponent implements AfterViewInit {
   currentWord = this.wordArray[Math.floor(Math.random() * this.wordArray.length)];
   IsNotTimeOut = true;
   lastWord = "";
+  userName = "";
 
   constructor() { }
 
@@ -30,6 +31,7 @@ export class AppComponent implements AfterViewInit {
       this.timeLeft = 10;
       this.lastWord = this.currentWord;
       this.currentWord = this.wordArray[Math.floor(Math.random() * this.wordArray.length)];
+      this.setHighestScore();
       if (this.lastWord.ignoreEqual(this.currentWord)) {
         this.currentWord = this.wordArray[Math.floor(Math.random() * this.wordArray.length)];
       }
@@ -41,8 +43,17 @@ export class AppComponent implements AfterViewInit {
       this.timeLeft = this.timeLeft - 1;
     }
     else {
-      this.IsNotTimeOut = false;
+      this.IsNotTimeOut = true;
     }
+  }
+
+  setHighestScore() {
+    if (this.score > this.getHighestScore()) {
+      localStorage.setItem("score", this.score.toString());
+    }
+  }
+  getHighestScore() {
+    return +window.localStorage.getItem("score");
   }
 
 }

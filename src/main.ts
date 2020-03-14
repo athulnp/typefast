@@ -6,7 +6,7 @@ import { environment } from './environments/environment';
 
 
 String.prototype.ignoreEqual = function (second: string): boolean {
-  return this.toUpperCase() === second.toUpperCase()
+  return this.toUpperCase().trim() === second.toUpperCase().trim()
 }
 
 if (environment.production) {

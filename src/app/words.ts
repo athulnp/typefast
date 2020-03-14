@@ -833,7 +833,7 @@ export const words = [
     "download",
     "creature",
     "zinc",
-    " spoil",
+    "spoil",
     "arise",
     "overflow",
     "lose",

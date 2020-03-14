@@ -1,23 +1,23 @@
 <body>
-  <button id="settings-btn" class="settings-btn">
+  <!-- <button id="settings-btn" class="settings-btn">
     <i class="fas fa-cog"></i>
   </button>
 
   <div id="settings" class="settings">
     <form id="settings-form">
-      <!-- <div>
+      <div>
         <label for="difficulty">Difficulty</label>
         <select id="difficulty">
           <option value="easy">Easy</option>
           <option value="medium">Medium</option>
           <option value="hard">Hard</option>
         </select>
-      </div> -->
+      </div>
     </form>
-  </div>
+  </div> -->
 
   <div class="container">
-    <h2>👩‍💻 Speed Typer 👨‍💻</h2>
+    <h2>👩‍💻 Type Fastly 👨‍💻</h2>
 
     <div *ngIf="IsNotTimeOut; then thenBlock else elseBlock"></div>
     <ng-template #thenBlock>
@@ -27,7 +27,7 @@
 
       <input type="text" (input)="onValidateWord()" id="text" [(ngModel)]="userword" autocomplete="off"
         placeholder="Type the word here..." />
-
+      <p>Your Highest Score : {{getHighestScore()}}</p>
       <p class="time-container">Time left: <span id="time">{{timeLeft}}</span></p>
 
       <p class="score-container">Score: <span id="score">{{score}}</span></p>
@@ -41,6 +41,4 @@
       <button onclick="location.reload()">Reload</button>
     </ng-template>
   </div>
-
-  <script src="script.js"></script>
 </body>
