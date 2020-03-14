@@ -43,7 +43,7 @@ export class AppComponent implements AfterViewInit {
       this.timeLeft = this.timeLeft - 1;
     }
     else {
-      this.IsNotTimeOut = true;
+      this.IsNotTimeOut = false;
     }
   }
 
