@@ -28,7 +28,7 @@ export class AppComponent implements AfterViewInit {
     if (this.currentWord.ignoreEqual(this.userword)) {
       this.userword = "";
       this.score = this.score + 1;
-      this.timeLeft = this.timeLeft + 2;
+      this.timeLeft = this.timeLeft + 3;
       this.lastWord = this.currentWord;
       this.currentWord = this.wordArray[Math.floor(Math.random() * this.wordArray.length)];
       this.setHighestScore();
