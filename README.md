@@ -1,5 +1,7 @@
 # TypeFast
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0db91bf0-5e58-470f-a385-02f2af59bac6/deploy-status)](https://app.netlify.com/sites/typefastly/deploys)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.14.
 
 ## Development server
